@@ -28,10 +28,6 @@ export default function Components(props) {
         rightLinks={<HeaderLinks />}
         fixed
         color="white"
-        changeColorOnScroll={{
-          height: 400,
-          color: "white"
-        }}
         {...rest}
       />
       <Parallax image={require("assets/img/bg4.jpg")}>
