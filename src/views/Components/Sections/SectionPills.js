@@ -39,25 +39,35 @@ export default function SectionPills() {
                     tabContent: (
                       <div className={classes.tab}>
                         <InfoCard 
+                          cardTitle="INSTALLATION & RELOCATION" 
+                          cardContent="Full turnkey relocation and installation of any industrial or commercial equipment, including civil works"
+                        />
+                        <InfoCard 
                           cardTitle="ALIGNMENTS" 
                           cardContent="High quality alignments, including laser alignments"
                         />
                         <InfoCard 
-                          cardTitle="CYLINDER HONING" 
-                          cardContent="Inner diameter and length of tube able to be honed:
-
-                          From I.D. 30mm/1.7/32 to I.D.
-                          35mm/1.3/8 x 2200mm long
-                          
-                          From I.D. 36mm/1.27/64 to I.D.
-                          50mm/2 x 5500mm long
-                          
-                          From I.D. 45mm/1.3/4 to I.D.
-                          533mm/21 x 5500mm long"
-                        />
-                        <InfoCard 
                           cardTitle="CAD DESIGN" 
                           cardContent="Full design and drafting support"
+                        />
+                        <InfoCard 
+                          cardTitle="CYLINDER HONING" 
+                          cardContent={
+                            <div>
+                              <div>Inner diameter and length of tube able to be honed:</div>
+                              <ul>
+                                <li>
+                                  From I.D. 30mm/1.7/32 to I.D. 35mm/1.3/8 x 2200mm long
+                                </li>
+                                <li>
+                                  From I.D. 36mm/1.27/64 to I.D. 50mm/2 x 5500mm long
+                                </li>
+                                <li>
+                                  From I.D. 45mm/1.3/4 to I.D. 533mm/21 x 5500mm long"
+                                </li>
+                              </ul>
+                            </div>
+                          }
                         />
                         <InfoCard 
                           cardTitle="MACHINING" 
@@ -78,10 +88,6 @@ export default function SectionPills() {
                         <InfoCard 
                           cardTitle="FABRICATION" 
                           cardContent="Large or small fabrications made from the design stage to commisioning"
-                        />
-                        <InfoCard 
-                          cardTitle="INSTALLATION & RELOCATION" 
-                          cardContent="Full turnkey relocation and installation of any industrial or commercial equipment, including civil works"
                         />
                       </div>
                     )
