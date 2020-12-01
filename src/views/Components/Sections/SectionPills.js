@@ -57,13 +57,10 @@ export default function SectionPills() {
                               <div>Inner diameter and length of tube able to be honed:</div>
                               <ul>
                                 <li>
-                                  From I.D. 30mm/1.7/32 to I.D. 35mm/1.3/8 x 2200mm long
+                                  I.D. 30 - 35mm (1 3/16 - 1 3/8") x 2200mm long
                                 </li>
                                 <li>
-                                  From I.D. 36mm/1.27/64 to I.D. 50mm/2 x 5500mm long
-                                </li>
-                                <li>
-                                  From I.D. 45mm/1.3/4 to I.D. 533mm/21 x 5500mm long"
+                                  I.D. 35 - 533mm (1 3/8 - 21") x 5500mm long
                                 </li>
                               </ul>
                             </div>
