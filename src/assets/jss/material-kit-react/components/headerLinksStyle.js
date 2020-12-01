@@ -42,7 +42,7 @@ const headerLinksStyle = theme => ({
     padding: "0.9375rem",
     fontWeight: "400",
     fontSize: "12px",
-    textTransform: "uppercase",
+    textTransform: "none",
     borderRadius: "3px",
     lineHeight: "20px",
     textDecoration: "none",
@@ -98,7 +98,8 @@ const headerLinksStyle = theme => ({
   socialIcons: {
     position: "relative",
     fontSize: "20px !important",
-    marginRight: "4px"
+    marginRight: "4px",
+    width: "30px"
   },
   dropdownLink: {
     "&,&:hover,&:focus": {
@@ -111,6 +112,9 @@ const headerLinksStyle = theme => ({
   ...tooltip,
   marginRight5: {
     marginRight: "5px"
+  },
+  addressTooltip: {
+    fontSize: "1.4rem"
   }
 });
 

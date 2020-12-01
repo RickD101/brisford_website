@@ -7,20 +7,22 @@ const componentsStyle = {
     textAlign: "left"
   },
   title: {
-    fontSize: "4.2rem",
+    fontSize: "2.8rem",
     fontWeight: "600",
     display: "inline-block",
     position: "relative"
   },
   subtitle: {
     fontSize: "1.313rem",
-    maxWidth: "500px",
-    margin: "10px 0 0"
+    maxWidth: "800px",
+    margin: "10px 0 0",
+    fontStyle: "italic"
   },
   main: {
     background: "#FFFFFF",
     position: "relative",
-    zIndex: "3"
+    zIndex: "3",
+    minHeight: "200px"
   },
   mainRaised: {
     margin: "-60px 30px 0px",
@@ -33,6 +35,30 @@ const componentsStyle = {
   },
   textCenter: {
     textAlign: "center"
+  },
+  '@media (max-width: 1199px)': {
+    title: {
+      fontSize: "2.5rem"
+    },
+    subtitle: {
+      fontSize: "1.2rem"
+    }
+  },
+  '@media (max-width: 991px)': {
+    title: {
+      fontSize: "2.2rem"
+    },
+    subtitle: {
+      fontSize: "1.1rem"
+    }
+  },
+  '@media (max-width: 767px)': {
+    title: {
+      fontSize: "1.6rem"
+    },
+    subtitle: {
+      fontSize: "1rem"
+    }
   }
 };
 

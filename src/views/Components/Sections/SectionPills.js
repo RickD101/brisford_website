@@ -3,16 +3,18 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
-import Schedule from "@material-ui/icons/Schedule";
-import List from "@material-ui/icons/List";
+import Info from "@material-ui/icons/Info";
+import Build from "@material-ui/icons/Build";
+import PhotoAlbumIcon from '@material-ui/icons/PhotoAlbum';
 
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import NavPills from "components/NavPills/NavPills.js";
+import SectionCarousel from "views/Components/Sections/SectionCarousel.js";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/pillsStyle.js";
+import InfoCard from "./InfoCard";
 
 const useStyles = makeStyles(styles);
 
@@ -22,157 +24,113 @@ export default function SectionPills() {
     <div className={classes.section}>
       <div className={classes.container}>
         <div id="navigation-pills">
-          <div className={classes.title}>
-            <h3>Navigation Pills</h3>
-          </div>
-          <div className={classes.title}>
-            <h3>
-              <small>With Icons</small>
-            </h3>
-          </div>
           <GridContainer>
-            <GridItem xs={12} sm={12} md={8} lg={6}>
+            <GridItem xs={12}>
               <NavPills
-                color="primary"
-                tabs={[
-                  {
-                    tabButton: "Dashboard",
-                    tabIcon: Dashboard,
-                    tabContent: (
-                      <span>
-                        <p>
-                          Collaboratively administrate empowered markets via
-                          plug-and-play networks. Dynamically procrastinate B2C
-                          users after installed base benefits.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically visualize customer directed convergence
-                          without revolutionary ROI. Collaboratively
-                          administrate empowered markets via plug-and-play
-                          networks. Dynamically procrastinate B2C users after
-                          installed base benefits.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically visualize customer directed convergence
-                          without revolutionary ROI. Collaboratively
-                          administrate empowered markets via plug-and-play
-                          networks. Dynamically procrastinate B2C users after
-                          installed base benefits.
-                        </p>
-                      </span>
-                    )
-                  },
-                  {
-                    tabButton: "Schedule",
-                    tabIcon: Schedule,
-                    tabContent: (
-                      <span>
-                        <p>
-                          Efficiently unleash cross-media information without
-                          cross-media value. Quickly maximize timely
-                          deliverables for real-time schemas.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically maintain clicks-and-mortar solutions
-                          without functional solutions. Dramatically visualize
-                          customer directed convergence without revolutionary
-                          ROI. Collaboratively administrate empowered markets
-                          via plug-and-play networks. Dynamically procrastinate
-                          B2C users after installed base benefits.
-                        </p>
-                      </span>
-                    )
-                  },
-                  {
-                    tabButton: "Tasks",
-                    tabIcon: List,
-                    tabContent: (
-                      <span>
-                        <p>
-                          Collaboratively administrate empowered markets via
-                          plug-and-play networks. Dynamically procrastinate B2C
-                          users after installed base benefits.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically visualize customer directed convergence
-                          without revolutionary ROI. Collaboratively
-                          administrate empowered markets via plug-and-play
-                          networks. Dynamically procrastinate B2C users after
-                          installed base benefits.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically visualize customer directed convergence
-                          without revolutionary ROI. Collaboratively
-                          administrate empowered markets via plug-and-play
-                          networks. Dynamically procrastinate B2C users after
-                          installed base benefits.
-                        </p>
-                      </span>
-                    )
-                  }
-                ]}
-              />
-            </GridItem>
-            <GridItem xs={12} sm={12} md={12} lg={6}>
-              <NavPills
-                color="rose"
+                color="info"
                 horizontal={{
-                  tabsGrid: { xs: 12, sm: 4, md: 4 },
-                  contentGrid: { xs: 12, sm: 8, md: 8 }
+                  tabsGrid: { xs: 12, sm: 4, md: 3, lg: 2 },
+                  contentGrid: { xs: 12, sm: 8, md: 9, lg: 10 }
                 }}
                 tabs={[
                   {
-                    tabButton: "Dashboard",
-                    tabIcon: Dashboard,
+                    tabButton: "Services",
+                    tabIcon: Build,
                     tabContent: (
-                      <span>
-                        <p>
-                          Collaboratively administrate empowered markets via
-                          plug-and-play networks. Dynamically procrastinate B2C
-                          users after installed base benefits.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically visualize customer directed convergence
-                          without revolutionary ROI. Collaboratively
-                          administrate empowered markets via plug-and-play
-                          networks. Dynamically procrastinate B2C users after
-                          installed base benefits.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically visualize customer directed convergence
-                          without revolutionary ROI. Collaboratively
-                          administrate empowered markets via plug-and-play
-                          networks. Dynamically procrastinate B2C users after
-                          installed base benefits.
-                        </p>
-                      </span>
+                      <div className={classes.tab}>
+                        <InfoCard 
+                          cardTitle="ALIGNMENTS" 
+                          cardContent="High quality alignments, including laser alignments"
+                        />
+                        <InfoCard 
+                          cardTitle="CYLINDER HONING" 
+                          cardContent="Inner diameter and length of tube able to be honed:
+
+                          From I.D. 30mm/1.7/32 to I.D.
+                          35mm/1.3/8 x 2200mm long
+                          
+                          From I.D. 36mm/1.27/64 to I.D.
+                          50mm/2 x 5500mm long
+                          
+                          From I.D. 45mm/1.3/4 to I.D.
+                          533mm/21 x 5500mm long"
+                        />
+                        <InfoCard 
+                          cardTitle="CAD DESIGN" 
+                          cardContent="Full design and drafting support"
+                        />
+                        <InfoCard 
+                          cardTitle="MACHINING" 
+                          cardContent="Full machine shop facilities available"
+                        />
+                        <InfoCard 
+                          cardTitle="KNIVES" 
+                          cardContent="Knife adjustments, guillotine and sheeter knife changes"
+                        />
+                        <InfoCard 
+                          cardTitle="SERVICE & REPAIR" 
+                          cardContent="Service personnel available for onsite and workshop maintenance and repair"
+                        />
+                        <InfoCard 
+                          cardTitle="HYDRAULIC FACILITIES" 
+                          cardContent="Our test rig is capable of testing hydraulic motors, pumps and cylinders up to 3500 psi"
+                        />
+                        <InfoCard 
+                          cardTitle="FABRICATION" 
+                          cardContent="Large or small fabrications made from the design stage to commisioning"
+                        />
+                        <InfoCard 
+                          cardTitle="INSTALLATION & RELOCATION" 
+                          cardContent="Full turnkey relocation and installation of any industrial or commercial equipment, including civil works"
+                        />
+                      </div>
                     )
                   },
                   {
-                    tabButton: "Schedule",
-                    tabIcon: Schedule,
+                    tabButton: "Gallery",
+                    tabIcon: PhotoAlbumIcon,
+                    tabContent: (
+                      <SectionCarousel />
+                    )
+                  },
+                  {
+                    tabButton: "About",
+                    tabIcon: Info,
                     tabContent: (
                       <span>
-                        <p>
-                          Efficiently unleash cross-media information without
-                          cross-media value. Quickly maximize timely
-                          deliverables for real-time schemas.
+                        <p className={classes.infoText}>
+                          Brisford Pty Ltd was established in 1988 by Derek Hichisson, and is located 
+                          in Keysborough, Victoria, Australia.
                         </p>
                         <br />
-                        <p>
-                          Dramatically maintain clicks-and-mortar solutions
-                          without functional solutions. Dramatically visualize
-                          customer directed convergence without revolutionary
-                          ROI. Collaboratively administrate empowered markets
-                          via plug-and-play networks. Dynamically procrastinate
-                          B2C users after installed base benefits.
+                        <p className={classes.infoText}>
+                          Derek commenced his apprenticeship in 1966, with Masson Scott in London. As part 
+                          of his apprenticeship he was trained in the manufacture of winders and sheeters 
+                          and and other equipment designed by Mason Scott and predominantly used in the paper 
+                          industry.
+                        </p>
+                        <br />
+                        <p className={classes.infoText}>
+                          As an integral part of his training he spent considerable time being trained for 
+                          high quality installation and commissioning of equipment by Masson Scott. 
+                          Travelling overseas between 1971 - 1983 to Australia, New Zealand, Africa, India, 
+                          whilst based in Scandinavia (as the centre of the paper industry), he utilised his 
+                          extensive training to carry out installation and commissioning of new equipment, 
+                          the upgrading and maintenance of equipment throughout these countries.
+                        </p>
+                        <br />
+                        <p className={classes.infoText}>
+                          During 1983 - 1988 he transferred to Molins Australia and continued with his 
+                          involvement of servicing all the paper industry throughout Australia, New Zealand 
+                          and New Guinea and Asia.
+                        </p>
+                        <br />
+                        <p className={classes.infoText}>
+                          Derek commenced Brisford Pty Ltd in 1988, and he continued his heavy involvement 
+                          within the paper industry throughout South East Asia. Brisford Pty Ltd now has a 
+                          dedicated team with many years of combined experience and expertise in Mechanical 
+                          Engineering, Pneumatic & Hydraulic systems design and repairs, and Design Drafting 
+                          and other varied facets of engineering.
                         </p>
                       </span>
                     )

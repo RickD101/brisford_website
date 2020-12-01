@@ -10,9 +10,10 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
 
-import image1 from "assets/img/bg.jpg";
-import image2 from "assets/img/bg2.jpg";
-import image3 from "assets/img/bg3.jpg";
+import image1 from "assets/img/brisford/image01.jpg";
+import image2 from "assets/img/brisford/image02.jpg";
+import image3 from "assets/img/brisford/image03.jpg";
+import image4 from "assets/img/brisford/image04.jpg";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
 
@@ -32,15 +33,16 @@ export default function SectionCarousel() {
     <div className={classes.section}>
       <div className={classes.container}>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={8} className={classes.marginAuto}>
+          <GridItem xs={12} md={10} className={classes.marginAuto}>
             <Card carousel>
               <Carousel {...settings}>
                 <div>
                   <img src={image1} alt="First slide" className="slick-image" />
                   <div className="slick-caption">
                     <h4>
-                      <LocationOn className="slick-icons" />
-                      Yellowstone National Park, United States
+                      <span className={classes.caption}>
+                        Add description
+                      </span>
                     </h4>
                   </div>
                 </div>
@@ -52,8 +54,9 @@ export default function SectionCarousel() {
                   />
                   <div className="slick-caption">
                     <h4>
-                      <LocationOn className="slick-icons" />
-                      Somewhere Beyond, United States
+                      <span className={classes.caption}>
+                        Add description
+                      </span>
                     </h4>
                   </div>
                 </div>
@@ -61,8 +64,19 @@ export default function SectionCarousel() {
                   <img src={image3} alt="Third slide" className="slick-image" />
                   <div className="slick-caption">
                     <h4>
-                      <LocationOn className="slick-icons" />
-                      Yellowstone National Park, United States
+                      <span className={classes.caption}>
+                        Add description
+                      </span>
+                    </h4>
+                  </div>
+                </div>
+                <div>
+                  <img src={image4} alt="Fourth slide" className="slick-image" />
+                  <div className="slick-caption">
+                    <h4>
+                      <span className={classes.caption}>
+                        Add description
+                      </span>
                     </h4>
                   </div>
                 </div>
