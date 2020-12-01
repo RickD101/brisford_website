@@ -17,9 +17,20 @@ const pillsStyle = {
   },
   tab: {
     display: "flex",
-    width: "100%",
-    flexWrap: "wrap",
-    justifyContent: "center"
+    flexFlow: "column wrap",
+    alignItems: "center",
+    maxHeight: "700px",
+    width: "100%"
+  },
+  '@media (max-width: 1279px)': {
+    tab: {
+      maxHeight: "900px",
+    }
+  },
+  '@media (max-width: 991px)': {
+    tab: {
+      maxHeight: "2000px",
+    }
   }
 };
 
